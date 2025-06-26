@@ -2,6 +2,7 @@
     "name": "zenithsu/metago_sdk",
     "description": "The metago SDK for php.",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Zenith\\Metago\\": "src/"
@@ -15,6 +16,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
+        "php": ">=7.2",
         "guzzlehttp/guzzle": "7.9.3"
     }
 }
