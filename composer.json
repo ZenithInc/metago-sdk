@@ -1,5 +1,5 @@
 {
-    "name": "zenith/metago_sdk",
+    "name": "zenithsu/metago_sdk",
     "description": "The metago SDK for php.",
     "type": "library",
     "autoload": {
