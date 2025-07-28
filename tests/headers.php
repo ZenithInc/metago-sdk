@@ -3,9 +3,9 @@
 use Zenith\Metago\Client;
 use Zenith\Metago\Configs;
 
-$configs = new Configs(677649, '2d5dbd922eceeb7edecda0196f037a50', 'dev');
+$configs = new Configs(677389, 'bb5ff2d4215fb8d3a66edba35b44d081', 'dev');
 $client = new Client($configs);
 
-const ACCESS_TOKEN = '57c764ea-a097-4ba4-a348-06da99e63461';
+const ACCESS_TOKEN = 'fe3b5a14-abc0-4f7f-9dcc-6014f0816132';
 
 return $client;

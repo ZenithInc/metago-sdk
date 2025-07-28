@@ -26,7 +26,7 @@ class Client
      * @throws GuzzleException
      * @throws UnauthorizedException
      */
-    public function request(RequestInterface $request, string $accessToken = ''): string
+    public function request(RequestInterface $request, string $accessToken = '', bool $isDebug = false): string
     {
         $params = $request->getParams();
         $params['timestamp'] = time();
@@ -41,6 +41,14 @@ class Client
                 'headers' => ['Application' => $this->configs->getApplication(), 'Authorization' => $accessToken],
                 'json' => $params,
             ]);
+            $response = $response->getBody()->getContents();
+            if ($this->configs->isDebug() || $isDebug) {
+                echo 'Url:' . $url . PHP_EOL;
+                echo 'Application:' . $this->configs->getApplication() . PHP_EOL;
+                echo 'Authorization:' . $accessToken . PHP_EOL;
+                echo 'Body:' . json_encode($params) . PHP_EOL;
+                echo 'Response:' . $response . PHP_EOL;
+            }
         } catch (ClientException $e) {
             $statusCode = $e->getResponse()->getStatusCode();
             if ($statusCode === 401) {
@@ -49,7 +57,7 @@ class Client
             throw $e;
         }
 
-        return $response->getBody()->getContents();
+        return $response;
     }
 
     private function calcSign(array $params, string $secretKey): string

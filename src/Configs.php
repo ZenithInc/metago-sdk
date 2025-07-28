@@ -43,10 +43,16 @@ class Configs
     private $env;
 
     /**
+     * 是否为debug模式
+     * @var bool
+     */
+    private $isDebug = false;
+
+    /**
      * @throws EndpointEnvEmptyException
      * @throws EnvVariableErrorException
      */
-    public function __construct(int $merchantId, string $secretKey, string $env = '', string $endpoint = '')
+    public function __construct(int $merchantId, string $secretKey, string $env = '', string $endpoint = '', bool $isDebug = false)
     {
         $this->merchantId = $merchantId;
         $this->secretKey = $secretKey;
@@ -63,6 +69,7 @@ class Configs
             $this->endpoint = $endpoint;
         }
         $this->env = $env;
+        $this->isDebug = $isDebug;
     }
 
     public function getMerchantId(): int
@@ -88,5 +95,10 @@ class Configs
     public function getEnv(): string
     {
         return $this->env;
+    }
+
+    public function isDebug(): bool
+    {
+        return $this->isDebug;
     }
 }

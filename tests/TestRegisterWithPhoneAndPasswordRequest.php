@@ -5,7 +5,7 @@ include "vendor/autoload.php";
 use Zenith\Metago\Requests\RegisterWithPhoneAndPasswordRequest;
 
 $request = new RegisterWithPhoneAndPasswordRequest();
-$request->setMobile("17757139533")
+$request->setMobile("18701627065")
     ->setSms("123456")
     ->setPassword("Xbcd20198$")
     ->setMerchantId(677649);

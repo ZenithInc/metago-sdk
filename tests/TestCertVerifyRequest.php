@@ -11,8 +11,8 @@ $request = new CertVerifyRequest();
 $request->setAccountType(3)  // 3 = 个人
     ->setAccountName("Bob Smith")
     ->setCardType(1)  // 1 = 身份证
-    ->setIdCardName("季俊潇")
-    ->setIdCardNo("330324199407044510");
+    ->setIdCardName("王畅")
+    ->setIdCardNo("231005200103250021");
 
 // Set some optional parameters
 $request->setIdCardPositive("https://example.com/id_card_front.jpg")
