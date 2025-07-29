@@ -7,5 +7,4 @@ use Zenith\Metago\Requests\Payment\GetAccountBalanceRequest;
 $request = new GetAccountBalanceRequest();
 
 $client = include "headers.php";
-$response = $client->request($request, ACCESS_TOKEN);
-echo $response . PHP_EOL;
+$client->request($request, ACCESS_TOKEN, true);
