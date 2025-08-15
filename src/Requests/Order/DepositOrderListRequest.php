@@ -7,7 +7,7 @@ use Zenith\Metago\RequestInterface;
 /**
  * 订单列表
  */
-class TestDepositOrderListRequest implements RequestInterface
+class DepositOrderListRequest implements RequestInterface
 {
     const API = '/order/v1/deposit/list';
 

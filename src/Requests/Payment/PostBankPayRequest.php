@@ -45,7 +45,7 @@ class PostBankPayRequest implements RequestInterface
         return $this;
     }
 
-    public function setSmsCode(string $smsCode): PostBankPayRequest
+    public function setSmsCode(string $smsCode): PostAccountRegisterRequest
     {
         $this->smsCode = $smsCode;
         return $this;

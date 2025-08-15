@@ -2,10 +2,10 @@
 
 include "vendor/autoload.php";
 
-use Zenith\Metago\Requests\Order\TestDepositOrderListRequest;
+use Zenith\Metago\Requests\Order\DepositOrderListRequest;
 
 // Create a new deposit order list request
-$request = new TestDepositOrderListRequest();
+$request = new DepositOrderListRequest();
 
 // Set optional parameters
 $request->setProductName("Gold Necklace")  // Example product name

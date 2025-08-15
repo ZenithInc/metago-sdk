@@ -5,14 +5,14 @@ use Zenith\Metago\Requests\Payment\PostRechargeSmallRequest;
 include "vendor/autoload.php";
 
 $request = new PostRechargeSmallRequest();
-$request->setAmount(10);
+$request->setAmount(100);
 // 测试快捷支付
-// $request->setBankAlias('cpb9p');
+// $request->setBankAlias('pnb25');
 // $request->setPayChannel('HF');
 // $request->setPayType('bank');
 
 // 测试支付宝
-$request->setPayType('ali_native')
+$request->setPayType('wx_native')
     ->setPayChannel('zhenli');
 
 

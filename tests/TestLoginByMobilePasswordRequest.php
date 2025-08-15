@@ -8,7 +8,7 @@ use Zenith\Metago\Requests\User\LoginByMobilePasswordRequest;
 $request = new LoginByMobilePasswordRequest();
 $request->setMobile("18701627065")
     ->setPassword("Xbcd20198$")
-    ->setMerchantId(677649);
+    ->setMerchantId(677389);
 
 // Optional parameters
 // $request->setInviteCode("INVITE123");
