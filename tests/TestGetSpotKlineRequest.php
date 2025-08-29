@@ -8,8 +8,8 @@ use Zenith\Metago\Requests\Goods\GetSpotKlineRequest;
 $request = new GetSpotKlineRequest();
 
 // Set the required symbol parameter
-$request->setSymbol("BTC-USDT"); // Example symbol value
+$request->setSymbol('22'); // Example symbol value
 
 $client = include "headers.php";
-$response = $client->request($request, ACCESS_TOKEN);
+$response = $client->request($request, ACCESS_TOKEN, true);
 echo $response . PHP_EOL;

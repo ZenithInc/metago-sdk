@@ -6,11 +6,11 @@ use Zenith\Metago\Requests\Order\OrderDepositCreateRequest;
 
 $request = new OrderDepositCreateRequest();
 $request->setNum(1)
-    ->setProductAlias('2n7uc')
+    ->setProductAlias('zsqyz')
     ->setDirection('now_price')
     ->setUseCoupon(false)
-    ->setFallPrice(20)
-    ->setRisePrice(80)
+    ->setFallPrice(48)
+    ->setRisePrice(1260)
     ->setPrice(6);
 
 // example for error: {"code":0,"msg":"余额不足，请充值"}

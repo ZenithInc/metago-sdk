@@ -50,6 +50,12 @@ class Client
                 echo 'Response:' . $response . PHP_EOL;
             }
         } catch (ClientException $e) {
+            if ($this->configs->isDebug() || $isDebug) {
+                echo 'Url:' . $url . PHP_EOL;
+                echo 'Application:' . $this->configs->getApplication() . PHP_EOL;
+                echo 'Authorization:' . $accessToken . PHP_EOL;
+                echo 'Body:' . json_encode($params) . PHP_EOL;
+            }
             $statusCode = $e->getResponse()->getStatusCode();
             if ($statusCode === 401) {
                 throw new UnauthorizedException();
@@ -77,6 +83,7 @@ class Client
         foreach ($newParams as $key => $value) {
             $preStr.= "$key=$value&";
         }
+        $preStr = rtrim($preStr, '&');
         // 返回签名
         return md5($preStr . '&key=' . $secretKey);
     }
